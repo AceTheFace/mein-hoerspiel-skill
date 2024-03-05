@@ -127,7 +127,7 @@ const playRandomAlbum = async(artist, access_token) => {
 
 
     const searchQuery = {
-        'q': artist,
+        'q': 'artist:' + artist,
         'type': 'album',
         'market': 'DE',
         'limit': 50,
@@ -136,6 +136,7 @@ const playRandomAlbum = async(artist, access_token) => {
     
     var albums = [];
     const search_url = 'https://api.spotify.com/v1/search?' + qs.stringify(searchQuery);
+    console.log("search url: " + search_url);
     await fetachAlbums(access_token, search_url, albums);
     console.log("found " + albums.length + " albums");
 
