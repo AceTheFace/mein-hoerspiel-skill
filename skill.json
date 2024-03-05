@@ -1,0 +1,99 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "de-DE": {
+          "summary": "Kleines Helferlein zum Abspielen von Hörspielen von Spotify. Ermöglicht es einfach eine zufällige Folge einer bestimmten Reihe abzuspielen.",
+          "examplePhrases": [
+            "Alexa öffne mein Hörspiel",
+            "Spiele eine Folge \u0027Bibi Blocksberg\u0027",
+            "Spiele \u0027Benjamin Blümchen\u0027"
+          ],
+          "keywords": [
+            "Hörspiel",
+            "Spotify",
+            "Benjamin",
+            "Blümchen",
+            "Bibi",
+            "Blocksberg",
+            "Paw",
+            "Patrol",
+            "Teufelskicker",
+            "Drei",
+            "Fragezeichen",
+            "Tkkg"
+          ],
+          "name": "Mein Hörspiel",
+          "description": "Bei Spotify ist es momentan nicht möglich einfach eine beliebige Folge einer bestimmten Reihe zu via Alexa zu starten. Will man einfach eine Folge \u0027Bibi Blocksberg\u0027 hören ohne sich für eine spezielle zu entscheiden und sagt bspw. \"Spiele Bibi Blocksberg\" werden völlig durcheinander Bibi Blocksberg-Titel abgespielt. Dieser Skill behebt dieses Problem.  Die Ansage \"Spiele Bibi Blocksberg\" spielt eine zufällige Folge in der richtigen Reihenfolge ab. \nBeim Verlassen des Skills oder mit \"Pause\" wird die Position des aktuellen Hörspiels  gespeichert. Du kannst beim nächsten Mal dann direkt an dieser Stelle die Folge fortsetzen. Gefällt dir eine Folge nicht, kannst du mit \"Andere Folge\" eine andere Folge auswählen lassen.\nWenn mehrere Geräte bei Spotify registriert sind, kannst du mit \"Konfiguriere Ausgabegerät\" festlegen auf welchem dieser Geräte das Hörspiel abgespielt werden soll.\nDieser Skill funktioniert nur mit einem Spotify Account.",
+          "smallIconUri": "file://assets/images/de-DE_smallIconUri.png",
+          "largeIconUri": "file://assets/images/de-DE_largeIconUri.png"
+        }
+      },
+      "automaticDistribution": {
+        "sourceLocaleForLanguages": [
+          {
+            "sourceLocale": "de-DE",
+            "language": "de"
+          }
+        ],
+        "isActive": true
+      },
+      "isAvailableWorldwide": false,
+      "testingInstructions": "{\"ask_dist_username\":\"\",\"ask_dist_password\":\"\",\"ask_dist_testing_instructions\":\"Requires Spotify (Premium Account) and installed Spotify skill. This skill is _not_ explicitly dedicated to children. If you get a reply like \\\"Autsch - hier funktioniert etwas nicht. Bitte versuche es noch einmal.\\\" please ensure you linked your Spotify account properly and you provided access to the required scopes. Additionally Spotify skill needs to be active in order to actually handle the play request by this skill  - otherwise you\u0027ll receive the message \\\"Keine verbundenen Spotify Geräte gefunden. Bitte zunächst Spotify Skill aktivieren.\\\" All these errors are not related to the skill, they\u0027re related to a non-proper setup of the spotify environment on the device - but these errors are handled properly providing an appropriate message, so not sure what else to provide here in order to get the certification.\"}",
+      "category": "STREAMING_SERVICE",
+      "distributionMode": "PUBLIC",
+      "distributionCountries": [
+        "AT",
+        "DE",
+        "CH"
+      ]
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:eu-west-1:279667060261:function:d6e82d6e-7ced-4aa6-bb3a-b9a9149a311c:Release_0"
+        },
+        "interfaces": [
+          {
+            "type": "AUDIO_PLAYER"
+          }
+        ],
+        "locales": {},
+        "regions": {
+          "EU": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:eu-west-1:279667060261:function:d6e82d6e-7ced-4aa6-bb3a-b9a9149a311c:Release_0"
+            }
+          },
+          "NA": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:us-east-1:279667060261:function:d6e82d6e-7ced-4aa6-bb3a-b9a9149a311c:Release_0"
+            }
+          },
+          "FE": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:us-west-2:279667060261:function:d6e82d6e-7ced-4aa6-bb3a-b9a9149a311c:Release_0"
+            }
+          }
+        }
+      }
+    },
+    "manifestVersion": "1.0",
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "locales": {
+        "de-DE": {
+          "privacyPolicyUrl": "https://yoururl.com/privacy"
+        }
+      },
+      "containsAds": false,
+      "isExportCompliant": true,
+      "isChildDirected": false,
+      "shoppingKit": {
+        "isShoppingActionsEnabled": false,
+        "isAmazonAssociatesOnAlexaEnabled": false
+      },
+      "usesPersonalInfo": false
+    }
+  }
+}

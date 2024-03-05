@@ -1,0 +1,146 @@
+{
+  "interactionModel": {
+    "dialog": {
+      "intents": [
+        {
+          "slots": [
+            {
+              "name": "artist",
+              "elicitationRequired": true,
+              "type": "AMAZON.Artist",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.115973992069.312824583966"
+              }
+            }
+          ],
+          "name": "PlayRandomAlbum",
+          "confirmationRequired": false,
+          "prompts": {}
+        },
+        {
+          "slots": [
+            {
+              "name": "deviceIndex",
+              "elicitationRequired": true,
+              "type": "AMAZON.NUMBER",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1400077436895.1156235640935"
+              }
+            }
+          ],
+          "name": "ConfigureDevice",
+          "delegationStrategy": "SKILL_RESPONSE",
+          "confirmationRequired": false,
+          "prompts": {}
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "wie geht das",
+            "was muss ich tun",
+            "hilfe",
+            "Wie funktioniert das"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "name": "artist",
+              "type": "AMAZON.Artist"
+            }
+          ],
+          "name": "PlayRandomAlbum",
+          "samples": [
+            "spiele eine folge {artist}",
+            "eine folge von {artist}",
+            "spiele eine folge von {artist}",
+            "spiele {artist}"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "name": "deviceIndex",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "Gerät {deviceIndex}",
+                "Wähle Nummer {deviceIndex}",
+                "Nummer {deviceIndex}",
+                "Gerät Nummer {deviceIndex}"
+              ]
+            }
+          ],
+          "name": "ConfigureDevice",
+          "samples": [
+            "Ausgabegerät einstellen",
+            "Wähle Ausgabegerät",
+            "Konfiguriere Gerät"
+          ]
+        },
+        {
+          "name": "AMAZON.PauseIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ResumeIntent",
+          "samples": []
+        },
+        {
+          "slots": [],
+          "name": "PlayAnotherRandomAlbum",
+          "samples": [
+            "Spiele was anderes",
+            "Gefällt mir nicht",
+            "Andere Folge",
+            "Spiele andere Folge"
+          ]
+        }
+      ],
+      "types": [],
+      "invocationName": "mein hörspiel"
+    },
+    "prompts": [
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Von wem möchtest du eine Folge hören?"
+          }
+        ],
+        "id": "Elicit.Slot.115973992069.312824583966"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Auf welchem Gerät möchtest du deine Hörspiele hören. Bitte Nummer angeben."
+          }
+        ],
+        "id": "Elicit.Slot.1400077436895.1156235640935"
+      }
+    ]
+  }
+}
