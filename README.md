@@ -1,5 +1,5 @@
 # mein-hoerspiel-skill
-Alexa skill for playing a random album for a given artist from spotify.
+Alexa skill for playing a random album for a given artist from spotify. This is especially useful for kids to play audio books (German: Hörspiele) from their favorite 'artist', which is not possible with the original spotify app currently.
 
 ## Usage
 
